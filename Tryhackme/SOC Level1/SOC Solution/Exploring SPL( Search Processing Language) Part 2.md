@@ -15,5 +15,11 @@ index=windowslogs | fields host User SourceIp
 If our logs contain seven distinct IP addresses in the **SourceIp** , the result will return seven events, one for each unique IP.
 ![[Pasted image 20260702132910.png]]
 # Rename
-## The `Rename` command is used to change the name of a field in your search results.
-
+## The `Rename` command is used to change the name of a field in your search results. This can help improves the readability of your search results, especially if the original  fields are too long or not suitable.
+```
+index=windowslogs 
+| fields EventID User Image Hostname SourceIp
+| rename User as Employee
+```
+![[Pasted image 20260703000048.png]]
+### This Command is also useful to flatten JSON or XML subfields.
