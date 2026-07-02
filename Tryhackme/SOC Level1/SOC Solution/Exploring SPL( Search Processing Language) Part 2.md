@@ -23,3 +23,20 @@ index=windowslogs
 ```
 ![[Pasted image 20260703000048.png]]
 ### This Command is also useful to flatten JSON or XML subfields.
+#### For Example , for a JSON log entry  like `{"request" :{"path" : "/admin","ip :" 10.0.0.2"}}`
+#### Splunk will create two fields : `request.path` and `request.ip` . If you don't want to type prefix every time , consider removing it like in the example below:
+```
+index=jsondata
+| rename request.* as *
+```
+# Regex Command 
+## The `regex` command filters search results using patterns instead of exact words.
+## Think of it like this :
+>Normal Search : Find an exact word.
+>Regex Search : Find anything that matches a pattern.
+### If you want to find every executable file, you don't want to search one by one.
+```
+index=windowslogs
+| regex Image="\.exe$"
+```
+![[Pasted image 20260703004714.png]]
