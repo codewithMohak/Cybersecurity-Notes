@@ -205,3 +205,5 @@ index=windowslogs
 ```
 
 ![[Pasted image 20260703185354.png]]
+
+# Next Continuous [[Exploring SPL( Search Processing Language) Part 3]]
