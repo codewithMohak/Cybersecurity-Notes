@@ -87,6 +87,7 @@ index=windowslogs Hostname= Salena.Adam
 | ------- | -------------- | ----- | ------- |
 | 1       | cmd.exe        | James | 0x1234  |
 | 1       | powershell.exe | Alice | 0x5678  |
+
 This tells you:
 - Which process is executed.
 - Which user executed it.
@@ -97,6 +98,7 @@ But it doesn't tell you how the user logged in.
 | ------- | ------------- | --------- | ---------- |
 | 4624    | 0x1234        | 10        | 10.10.10.5 |
 | 4624    | 0x5678        | 2         | Local      |
+
 This tells you:
 - Login type.
 - IP address.
