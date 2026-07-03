@@ -5,10 +5,12 @@
 ## Fields
 ## The `fields` command controls which fields appears in the search results.
 ## Instead of showing hundreds of fields, it displays only the ones you care about.
+
 ```
 index=windowslogs | fields host User SourceIp
 ```
-![[Pasted image 20260702132051.png]]
+
+![[Pasted image 20260702132051.png|697]]
 # Dedup
 ## The dedup command removes the duplicate values from the search results.
 ### For Example 
