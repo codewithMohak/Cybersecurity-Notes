@@ -127,6 +127,7 @@ index-windowslogs EventID=1
 index=windowslogs
 | highlight User EventID Image "Process accessed"
 ```
+
 ![[Pasted image 20260703132654.png]]
 # Stats Command
 ## The `stats` command summarize  data by performing calculation like :
@@ -136,11 +137,13 @@ index=windowslogs
 - Maximum
 - Minimum
 Instead of showing every log , it gives you statistics.
+
 ```
 index=windowslogs
 | stats count by EventID
 ```
 # Sort the Results
+
 ```
 index=windowslogs
 | stats count by EventID
@@ -155,7 +158,7 @@ index=windowslogs
 | Min      | `stats min(UserAge)`      | Return the minimum value of the chosen field.         |
 | Sum      | `stats sum(Cost)`         | Return the sum of the chosen field vlalues.           |
 | Count    | `stats count by SourceIp` | Return the number of occurrences of the chosen field. |
-![[Pasted image 20260703132800.png]]
+
 # Chart 
 ## The `chart` command is similar to `stats`, but it's designed for the visualizations.
 
