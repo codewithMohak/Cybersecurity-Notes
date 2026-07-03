@@ -112,3 +112,74 @@ index-windowslogs EventID=1
 | table_time Image User LogonType IpAddress
 ```
 ![[Pasted image 20260703092916.png]]
+# Transforming Commands
+## `Transforming Commands` allow you to change the raw event data into the useful, summaries and visualizations.
+## General Transformational Commands
+
+| Command | Example                                  | Exaplanation                                |
+| ------- | ---------------------------------------- | ------------------------------------------- |
+| top     | `index=windowslogs \| top User limit=5`  | Show the users that appear most frequently. |
+| rare    | `index=windowslogs \| rare User limit=5` | It shows the least common values.           |
+# Highlight  Command 
+## The `highlight` command does not filter or change the log.
+## It simply highlights  specific words  when viewing logs in Raw mode.
+```
+index=windowslogs
+| highlight User EventID Image "Process accessed"
+```
+![[Pasted image 20260703132654.png]]
+# Stats Command
+## The `stats` command summarize  data by performing calculation like :
+- Count
+- Sum
+- Average
+- Maximum
+- Minimum
+Instead of showing every log , it gives you statistics.
+```
+index=windowslogs
+| stats count by EventID
+```
+# Sort the Results
+```
+index=windowslogs
+| stats count by EventID
+| sort EventID
+```
+# Common `stats` Functions
+
+| Function | Example                   | Explaination                                          |
+| -------- | ------------------------- | ----------------------------------------------------- |
+| Average  | `stats avg(ProcessCount)` | Calculate the average value of the chosen field.      |
+| Max      | `stats max(Price)`        | Return the maximum  value of the chosen field.        |
+| Min      | `stats min(UserAge)`      | Return the minimum value of the chosen field.         |
+| Sum      | `stats sum(Cost)`         | Return the sum of the chosen field vlalues.           |
+| Count    | `stats count by SourceIp` | Return the number of occurrences of the chosen field. |
+![[Pasted image 20260703132800.png]]
+# Chart 
+## The `chart` command is similar to `stats`, but it's designed for the visualizations.
+
+```
+index=windowslogs
+| chart count by User
+```
+
+![[Pasted image 20260703145252.png]]
+# Timechart
+## The `timechart` command shows how data change over time.
+
+```
+index=windowslogs Image!=""
+| timechart span=30m count by Image limit=5
+```
+# Data Enrichment and Field Manipulation
+# IP Location
+## The `IP Location` command adds geographical information to IP addresses.
+
+```
+index=windowslogs
+| iplocation SourceIp
+| stats count by Country
+```
+
+![[Pasted image 20260703181613.png]]
