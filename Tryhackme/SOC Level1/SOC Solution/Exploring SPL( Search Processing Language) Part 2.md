@@ -183,3 +183,22 @@ index=windowslogs
 ```
 
 ![[Pasted image 20260703181613.png]]
+# Lookup
+## A `lookup` adds  extra information from an external file.
+
+```
+index=windowslogs
+| lookup user_roles Hostname OUTPUT UserRole
+| stats count by Hostname UserRole
+```
+
+![[Pasted image 20260703184600.png]]
+# Eval
+## The `eval` command is used to create a new fields or modifies existing ones.
+```
+index=windowslogs
+| eval LogonTypeDesc = case(LogonType == 3, "Network Logon" , LogonType ==5, "Service")
+| stats count by LogonType LogonTypeDesc
+```
+
+![[Pasted image 20260703185354.png]]
