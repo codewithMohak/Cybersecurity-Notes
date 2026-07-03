@@ -182,5 +182,4 @@ Shows all the events where the destination IP belongs to the 172.18.x.x network.
 | `index=windowslogs alice AND bob OR charlie`   | `index=windowslogs alice AND (bob OR charlie)` |
 | `index=windowslogs (alice AND bob) OR charlie` | `index=windowslogs (alice AND bob) OR charlie` |
 
-[^1]
-[^1]: [[Exploring SPL( Search Processing Language) Part 2]]
+# Next Continuous [[Exploring SPL( Search Processing Language) Part 2]]
