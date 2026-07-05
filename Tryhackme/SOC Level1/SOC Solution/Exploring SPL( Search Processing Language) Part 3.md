@@ -3,7 +3,7 @@
 ### For Example , Imagine a data set of 2,000 VPN  logins with just four fields : time of the login, username , source IP, and source country.
 #### How would you identify logins from the unexcepted countries, if field statistics don't show any anomalies?
 
-![[Cyber-Security/Attachment/Attachment/Exploring SPL( Search Processing Language) Part 3-1783220130438.webp]]
+![[Cyber-Security/Attachment/Exploring SPL( Search Processing Language) Part 3-1783220130438.webp]]
 # Detecting Outliers by Country
 ## For a US-based user , logging in from the US is expected, but for an EU-based user, it might be the sign of intrusion.
 ## The `eventstats` command is very similar to the `stats`, but preserves raw event for further processing ; and `where` command is like `search`, but a more powerful.
@@ -18,7 +18,7 @@ index=windowslogs
 | table _time user scr_ip src_country country_freq
 ```
 
-![[Exploring SPL( Search Processing Language) Part 3.png]]
+![[Exploring SPL( Search Processing Language) Part 3-1783242536122.webp]]
 # Detecting Outliners by Hour
 ## Following  a similar approach, you can hunt for logins during anomalous hours.
 
@@ -34,4 +34,4 @@ index=vpnlogs
 | sort- hour_zscore
 ```
 
-![[Exploring SPL( Search Processing Language) Part 3 png]]
+![[Exploring SPL( Search Processing Language) Part 3-1783242512538.webp]]
