@@ -70,4 +70,4 @@ For example , imagine the sentence :
 The LLM tries to predict the missing word. This is exactly what happens when you chat with an AI chatbot like ChatGPT. Behind the scenes, the model keeps predicting the next word until it forms a complete response.
 # How are LLMs trained?
 LLMs first go through a stage called pre-training.
-![[Cyber-Security/Attachment/AI and ML Security Threats-1783243003992.webp]]
+![[../../../Attachment/AI and ML Security Threats-1783243003992.webp]]
