@@ -3,7 +3,7 @@
 ### For Example , Imagine a data set of 2,000 VPN  logins with just four fields : time of the login, username , source IP, and source country.
 #### How would you identify logins from the unexcepted countries, if field statistics don't show any anomalies?
 
-![[Exploring SPL (Search Processing Language) Part 3.png]]
+![[Exploring SPL( Search Processing Language) Part 3-1783220130438.webp]]
 # Detecting Outliers by Country
 ## For a US-based user , logging in from the US is expected, but for an EU-based user, it might be the sign of intrusion.
 ## The `eventstats` command is very similar to the `stats`, but preserves raw event for further processing ; and `where` command is like `search`, but a more powerful.
