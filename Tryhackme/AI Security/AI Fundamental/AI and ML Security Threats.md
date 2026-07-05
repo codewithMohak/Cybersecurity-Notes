@@ -71,3 +71,18 @@ The LLM tries to predict the missing word. This is exactly what happens when you
 # How are LLMs trained?
 LLMs first go through a stage called pre-training.
 ![[../../../Attachment/AI and ML Security Threats-1783243003992.webp]]
+# Learning Through Prediction
+At the beginning of training, the model guesses the missing word **randomly**.
+The guessed word is then compared with the **correct word**.
+
+- If the prediction is wrong, the model adjusts its parameters.
+- If the prediction is correct, the model strengthens those patterns.
+
+This adjustment process is called **Backpropagation**, which helps the model reduce mistakes and improve future predictions.
+
+This process is repeated **trillions of times** until the model becomes very good at predicting words, understanding language, and responding to completely new text that it has never seen before.
+## Why Are GPUs Important?
+
+Training an LLM requires a huge amount of computing power.
+
+This is possible because of **Graphics Processing Units (GPUs)**, which can perform **many calculations at the same time (parallel processing)**. GPUs make it possible to train models on extremely large datasets much faster than regular CPUs.
