@@ -18,7 +18,7 @@ index=windowslogs
 | table _time user scr_ip src_country country_freq
 ```
 
-![[Exploring SPL( Search Processing Language) Part 3-1783242536122.webp]]
+![[Cyber-Security/Attachment/Exploring SPL( Search Processing Language) Part 3-1783242536122.webp]]
 # Detecting Outliners by Hour
 ## Following  a similar approach, you can hunt for logins during anomalous hours.
 
@@ -34,4 +34,4 @@ index=vpnlogs
 | sort- hour_zscore
 ```
 
-![[Exploring SPL( Search Processing Language) Part 3-1783242512538.webp]]
+![[Cyber-Security/Attachment/Exploring SPL( Search Processing Language) Part 3-1783242512538.webp]]
