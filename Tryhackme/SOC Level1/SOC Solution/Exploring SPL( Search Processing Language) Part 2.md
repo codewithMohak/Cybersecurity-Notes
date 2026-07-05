@@ -41,7 +41,7 @@ index=jsondata
 index=windowslogs
 | regex Image="\.exe$"
 ```
-![[Pasted image 20260703004714.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703004714.png]]
 # Structure Results
 ## When working with the log data , raw search results can be overwhelming , and some event may not be relevant to the investigation.
 ## SPL command enable you to filters, order and format these results, allowing you to focus on the most important information.
@@ -73,7 +73,7 @@ index=windowslogs Hostname= Salena.Adam
 | table_time Hostname EventID Category 
 | reverse
 ```
-![[Pasted image 20260703091839.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703091839.png]]
 # Subsearch
 ## A `Subsearch` is simply a search  inside  another search.
 ## Syntax 
@@ -113,7 +113,7 @@ index-windowslogs EventID=1
   | fields LogonId LogonType IpAddress]
 | table_time Image User LogonType IpAddress
 ```
-![[Pasted image 20260703092916.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703092916.png]]
 # Transforming Commands
 ## `Transforming Commands` allow you to change the raw event data into the useful, summaries and visualizations.
 ## General Transformational Commands
@@ -130,7 +130,7 @@ index=windowslogs
 | highlight User EventID Image "Process accessed"
 ```
 
-![[Pasted image 20260703132654.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703132654.png]]
 # Stats Command
 ## The `stats` command summarize  data by performing calculation like :
 - Count
@@ -169,7 +169,7 @@ index=windowslogs
 | chart count by User
 ```
 
-![[Pasted image 20260703145252.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703145252.png]]
 # Timechart
 ## The `timechart` command shows how data change over time.
 
@@ -187,7 +187,7 @@ index=windowslogs
 | stats count by Country
 ```
 
-![[Pasted image 20260703181613.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703181613.png]]
 # Lookup
 ## A `lookup` adds  extra information from an external file.
 
@@ -197,7 +197,7 @@ index=windowslogs
 | stats count by Hostname UserRole
 ```
 
-![[Pasted image 20260703184600.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703184600.png]]
 # Eval
 ## The `eval` command is used to create a new fields or modifies existing ones.
 ```
@@ -206,6 +206,6 @@ index=windowslogs
 | stats count by LogonType LogonTypeDesc
 ```
 
-![[Pasted image 20260703185354.png]]
+![[Cyber-Security/Attachment/Attachment/Pasted image 20260703185354.png]]
 
 # Next Continuous [[Exploring SPL( Search Processing Language) Part 3]]
