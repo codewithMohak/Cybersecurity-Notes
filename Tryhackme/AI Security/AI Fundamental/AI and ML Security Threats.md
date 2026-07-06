@@ -85,4 +85,4 @@ This process is repeated **trillions of times** until the model becomes very goo
 
 Training an LLM requires a huge amount of computing power.
 
-This is possible because of **Graphics Processing Units (GPUs)**, which can perform **many calculations at the same time (parallel processing)**. GPUs make it possible to train models on extremely large datasets much faster than regular CPUs.
+This is possible because of **Graphics Processing Units (GPUs)**, which can perform **many calculations at the same time (parallel processing)**. GPUs make it possible to train models on extremely large datasets much faster than regular CPUs
